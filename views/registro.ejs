@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Banco de dados</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <h1 class="page-title">Projeto BeMobile</h1>
+      <div class="form-container" id="form-container-register">
+    <form action="/registro" method="post">
+        <label for="nomeUsuario">Nome:</label>
+        <input
+          type="name"
+          name="nomeUsuario"
+          id="ctt-nome"
+          required
+          placeholder="Insira seu nome"
+        />
+        <label for="emailUsuario">E-Mail</label>
+        <input
+          type="email"
+          name="emailUsuario"
+          id="ctt-email"
+          required
+          placeholder="email@example.com"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+        />
+        <label for="passwordUsuario">Senha</label>
+        <input
+          type="password"
+          name="passwordUsuario"
+          id="ctt-password"
+          required
+          placeholder="Criar a senha"
+          pattern=".{8,}"
+          title="Eight or more characters"
+        />
+        <br>
+        <input type="submit" />
+      </div>
+    </form>
+    </div>
+  </body>
+</html>

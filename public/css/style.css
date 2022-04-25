@@ -1,0 +1,329 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/*-------------------------------*/
+
+body {
+  background-color: #152238;
+  color: rgb(165, 165, 165);
+}
+
+.page-title {
+  margin-top: 3%;
+  margin-bottom: 2%;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container {
+  background-color: #27445c;
+  padding: 5%;
+  border: rgb(165, 165, 165) solid 5px;
+  border-radius: 15%;
+  font-size: larger;
+}
+
+.form-container fieldset {
+  margin-bottom: 5%;
+}
+
+.form-container input[type="password"],
+input[type="email"],
+input[type="name"] {
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: beige;
+}
+
+.form-container button {
+  width: 50%;
+  margin-top: 3%;
+  padding: 3%;
+  background-color: #27445c;
+  border: rgb(165, 165, 165) solid 3px;
+  border-radius: 25%;
+  color: rgb(165, 165, 165);
+}
+
+.form-container button:hover {
+  cursor: pointer;
+}
+
+.register-sugest {
+  margin-top: 3%;
+  border: rgb(165, 165, 165) solid 3px;
+  border-radius: 5%;
+  padding: 1% 2%;
+  color: rgb(165, 165, 165);
+}
+
+.register-sugest button {
+  background-color: #27445c;
+  padding: 1%;
+  color: rgb(165, 165, 165);
+}
+
+.register-sugest button:hover {
+  cursor: pointer;
+}
+
+#form-container-register {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #27445c;
+  padding: 5%;
+  width: 15%;
+}
+
+#form-container-clientes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: flex-start;
+  background-color: #27445c;
+  padding: 8%;
+  width: 20%;
+}
+
+#form-container-clientes input[type="text"],
+input[type="number"],
+input[type="decimal"] {
+  margin-top: 2%;
+  margin-bottom: 5%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: beige;
+}
+
+#form-container-register input {
+  margin-top: 2%;
+  margin-bottom: 5%;
+}
+
+input[type="submit"] {
+  margin-top: 3%;
+  padding: 3%;
+  background-color: #27445c;
+  border: rgb(165, 165, 165) solid 3px;
+  border-radius: 25%;
+  color: rgb(165, 165, 165);
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+.form-vendas input, select{
+  margin-top: 2%;
+  margin-bottom: 5%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: beige;
+}
+
+.form-vendas input[type="submit"]{
+  background-color: #27445c;
+}
+
+/*--------------LISTAS--------------*/
+
+.index-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #27445c;
+  border: #ccc solid 3px;
+  border-radius: 10%;
+  width: 60%;
+}
+
+.index-menu a{
+  margin: 4%;
+  padding: 2%;
+  border: #ccc solid 3px;
+  color: #ccc;
+  text-decoration: none;
+  width: 30%;
+  border-radius: 15%;
+}
+
+#register-button {
+  background-color: #27445c;
+  color: rgb(165, 165, 165);
+  width: 16%;
+  border: #ccc solid 3px;
+  margin: 1% 0 3% 0;
+  padding: 0.3%;
+  text-align: center;
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.clientes-lista {
+  width: 90%;
+}
+
+.cliente-infos {
+  display: grid;
+  grid-template-columns: 11% 11% 20% 11% 11%;
+  gap: 15%;
+  background-color: #27445c;
+  border: rgb(165, 165, 165) solid 2px;
+  color: rgb(165, 165, 165);
+  font-size: 2vw;
+  margin-bottom: 3%;
+  padding-left: 1.4%;
+}
+
+.cliente-infos button {
+  background-color: #27445c;
+  color: rgb(165, 165, 165);
+}
+
+.cliente-infos a {
+  color: rgb(165, 165, 165);
+  text-decoration: none;
+}
+
+.cliente-infos button:hover {
+  cursor: pointer;
+}
+
+.legenda-infos {
+  display: grid;
+  grid-template-columns: 11% 11% 20% 11% 11%;
+  gap: 15%;
+  margin-bottom: 2%;
+  padding-left: 1%;
+}
+
+.compras-lista {
+  width: 100%;
+}
+
+.compras-info {
+  display: grid;
+  grid-template-columns: 11% 11% 20% 11% 11%;
+  gap: 15%;
+  background-color: #27445c;
+  border: rgb(165, 165, 165) solid 2px;
+  color: rgb(165, 165, 165);
+  font-size: 1.5vw;
+  margin-bottom: 3%;
+  padding-left: 1.4%;
+}
+
+.legenda-infos {
+  display: grid;
+  grid-template-columns: 11% 11% 11% 11%;
+  gap: 15%;
+  margin-bottom: 2%;
+  padding-left: 1%;
+}
+
+.details-compras {
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+  width: 80%;
+  margin-bottom: 3%;
+  background-color: #27445c;
+  border: #ccc solid 4px;
+  border-radius: 15%;
+}
+
+/*--------------DETALHES--------------*/
+
+.details-info,
+.details-vendas {
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+  width: 60%;
+  margin-bottom: 3%;
+  background-color: #27445c;
+  border: #ccc solid 4px;
+  border-radius: 15%;
+}
+
+.details-info h1,
+h2 {
+  margin-bottom: 1%;
+  font-size: 2vw;
+}
+
+.details-info h3 {
+  margin-bottom: 0.5%;
+  font-size: 1.3vw;
+}
+
+.details-info button {
+  background-color: #27445c;
+  color: rgb(165, 165, 165);
+  width: 16%;
+  border: #ccc solid 3px;
+  margin: 0.6% 0;
+  padding: 0.3%;
+}
+
+.detail-buttons {
+  color: rgb(165, 165, 165);
+  text-decoration: none;
+  font-size: 1.3vw;
+  padding: 0.5%;
+  margin-top: 2%;
+  border: #ccc solid 2px;
+  width: 8%;
+  text-align: center;
+}
+
+.details-info input {
+  color: rgb(165, 165, 165);
+  text-decoration: none;
+  font-size: 1.3vw;
+  padding: 0.5%;
+  margin-top: 2%;
+  border: #ccc solid 2px;
+  width: 15%;
+  border-radius: 0%;
+  text-align: center;
+}
+
+.details-info a {
+  color: rgb(165, 165, 165);
+  text-decoration: none;
+  font-size: 1.3vw;
+  padding: 0.5%;
+  margin-top: 2%;
+  border: #ccc solid 2px;
+  width: 13%;
+  border-radius: 0%;
+  text-align: center;
+}

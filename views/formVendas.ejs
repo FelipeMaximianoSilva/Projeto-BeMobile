@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="/" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Banco de dados</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <h1 class="page-title">Projeto BeMobile</h1>
+      <div class="form-container" id="form-container-clientes">
+        <form action="registro/vendas" method="post" class="form-vendas">
+            
+            <label for="clienteVendas">Cliente:</label><br>
+
+            <select
+              type="number"
+              name="clienteVendas"
+              id="ctt-nome"
+              required
+              placeholder="Insira o comprador"
+            >
+
+            <% cliente.forEach(cliente => { %>
+            <option value="<%= cliente.idClientes %>"><%= cliente.nomeClientes %></option>
+            <% }) %>
+            </select>
+
+            <br><br>
+
+            <label for="produtosVendas">Produto:</label><br>
+
+            <select
+              type="number"
+              name="produtosVendas"
+              id="produtosVendas"
+              required
+              placeholder="Insira o produto"
+            >
+
+            <% produto.forEach(produto => { %>
+            <option value="<%= produto.idProdutos %>"><%= produto.modeloProdutos %></option>
+            <% }) %>
+            </select>
+            <br><br>
+
+            <label for="quantidadeVendas">Quantidade:</label><br>
+            <input type="number" id="quantidadeVendas" name="quantidadeVendas"><br><br>
+
+            <input type="submit" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

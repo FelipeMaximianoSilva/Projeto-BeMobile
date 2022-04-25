@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="/" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Banco de dados</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <h1 class="page-title">Projeto BeMobile</h1>
+      <a href="/registro/vendas" id="register-button">Nova Venda</a>
+      <li class="clientes-lista">
+        <ul class="legenda-infos">
+          <div><h2>ID</h2></div>
+          <div><h2>Cliente</h2></div>
+          <div><h2>Produto</h2></div>
+        </ul>
+        <% dados.forEach(dados => { %> 
+        <% cliente.forEach(cliente => { %> 
+        <% produto.forEach(produto => { %>
+        <% if (produto.idProdutos === dados.produtosVendas) { %>
+        <% if (cliente.idClientes === dados.clienteVendas) { %>
+        <ul class="cliente-infos">
+          <div><%= dados.idVendas %></div>
+          <div><%= cliente.nomeClientes %></div>
+          <div><%= produto.modeloProdutos.toUpperCase() %></div>
+          <button>
+            <a href="/view/vendas/<%= dados.idVendas %>">Detalhes</a>
+          </button>
+        </ul>
+        <% } %>
+        <% } %>
+        <% }) %>
+        <% }) %>
+        <% }) %>
+      </li>
+      <a
+        href="/index"
+        id="register-button"
+        style="align-items: center; justify-content: center; display: flex"
+        >Página Inicial</a
+      >
+    </div>
+  </body>
+  <script src="../public/js/script.js"></script>
+</html>

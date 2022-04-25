@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="/" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Banco de dados</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <h1 class="page-title">Projeto BeMobile</h1>
+      <div class="details-info">
+        <% cliente.forEach(cliente => { %>
+        <% produto.forEach(produto => { %>
+        <% if (cliente.idClientes === dados.clienteVendas) { %>
+        <h1>ID da Venda: <%= dados.idVendas %></h1>
+        <br />
+        <h3>Data: <%= dados.timeVendas %></h3>
+        <h3>Cliente: <%= cliente.nomeClientes %></h3>
+        <h3>Produto Adquirido: <%= produto.modeloProdutos %></h3>
+        <h3>Quantidade: <%= dados.quantidadeVendas %></h3>
+        <h3>Valor Total: <%= dados.valorunVendas * dados.quantidadeVendas %></h3>
+        <% } %>
+        <% }); %>
+        <% }); %>
+      </div>
+      <a
+        href="/view/vendas"
+        id="register-button"
+        style="align-items: center; justify-content: center; display: flex"
+        >Vendas</a
+      >
+    </div>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="/" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Banco de dados</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <h1 class="page-title">Projeto BeMobile</h1>
+      <div class="form-container" id="form-container-clientes">
+        <form action="registro/produtos" method="post">
+            <label for="tipoProdutos">Tipo:</label><br>
+            <input
+              type="text"
+              name="tipoProdutos"
+              id="produtos-tipo"
+              required
+              placeholder="Insira o tipo de produto"
+            /><br>
+            <label for="marcaProdutos">Marca:</label><br>
+            <input
+              type="text"
+              name="marcaProdutos"
+              id="produtos-marca"
+              required
+              placeholder="Insira a marca dos produtos"
+            /><br>
+            <label for="modeloProdutos">Modelo:</label><br>
+            <input
+              type="text"
+              name="modeloProdutos"
+              id="produtos-modelo"
+              required
+              placeholder="Insira o modelo dos produtos"
+            /><br>
+            <label for="precoProdutos">Preço:</label><br>
+            <input
+              type="decimal"
+              name="precoProdutos"
+              id="produtos-preco"
+              required
+              placeholder="Insira o preço de venda"
+            /><br>
+            <input type="submit" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

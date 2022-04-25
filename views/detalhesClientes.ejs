@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="/" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Banco de dados</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <h1 class="page-title">Projeto BeMobile</h1>
+      <div class="details-info">
+        <h1><%= dados.nomeClientes %></h1>
+        <h2>Número de cadastro: <%= dados.idClientes %></h2>
+        <br />
+        <h3>Telefone: <%= dados.telClientes %></h3>
+        <h3>CPF: <%= dados.cpfClientes %></h3>
+        <h3>
+          Endereço: <%= dados.Endereco %>, <%= dados.numEndereco %>, <br /><%=
+          dados.Bairro %>, <%= dados.Cidade %><br /><%= dados.CEP %>
+        </h3>
+        <a
+          href="../view/clientes/edit/<%= dados.idClientes %>"
+          class="detail-buttons"
+          >Editar</a
+        >
+        <form action="/view/clientes/<%= dados.idClientes %>" method="post">
+          <input type="submit"></input>
+        </form>
+      </div>
+      <div class="details-compras">
+        <h2>Compras</h2>
+        <li class="compras-lista">
+          <ul class="legenda-infos">
+            <div><h2>ID</h2></div>
+            <div><h2>Produto</h2></div>
+            <div><h2>Quantidade</h2></div>
+          </ul>
+        <% compras.forEach(element => { %>
+        <% produto.forEach(produto => { %>
+          <div><%= element.timeVendas %></div>
+          <ul class="compras-info">
+            <div><%= element.idVendas %></div>
+            <div><%= produto.modeloProdutos %></div>
+            <div><%= element.quantidadeVendas %></div>
+            <div>R$ <%= element.precoProdutos * element.quantidadeVendas%></div>
+          </ul>
+        <% }) %>
+        <% }) %>
+        </li>
+      </div>
+      <a
+        href="/view/clientes"
+        id="register-button"
+        style="align-items: center; justify-content: center; display: flex"
+        >Clientes</a
+      >
+    </div>
+  </body>
+</html>

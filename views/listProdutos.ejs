@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="/" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Banco de dados</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <h1 class="page-title">Projeto BeMobile</h1>
+      <a href="/registro/produtos" id="register-button">Novo Produto</a>
+      <li class="clientes-lista">
+        <ul class="legenda-infos">
+          <div><h2>ID</h2></div>
+          <div><h2>Modelo</h2></div>
+          <div><h2>Preço</h2></div>
+        </ul>
+        <% dados.forEach(element => { %> <% if (element.isDeleted == '0') { %>
+        <ul class="cliente-infos">
+          <div><%= element.idProdutos %></div>
+          <div><%= element.modeloProdutos.toUpperCase() %></div>
+          <div><%= element.precoProdutos %></div>
+          <button>
+            <a href="/view/produtos/<%= element.idProdutos %>">Detalhes</a>
+          </button>
+        </ul>
+        <% } %> <% }) %>
+        <ul></ul>
+      </li>
+      <a
+        href="/index"
+        id="register-button"
+        style="align-items: center; justify-content: center; display: flex"
+        >Página Inicial</a
+      >
+    </div>
+  </body>
+  <script src="../public/js/script.js"></script>
+</html>

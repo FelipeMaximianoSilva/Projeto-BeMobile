@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="/" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Banco de dados</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <h1 class="page-title">Projeto BeMobile</h1>
+      <div class="form-container" id="form-container-clientes">
+        <form action="view/clientes/edit/<%= dados.idClientes %>" method="post">
+            <label for="nomeClientes">Nome:</label><br>
+            <input
+              type="text"
+              name="nomeClientes"
+              id="ctt-nome"
+              required
+              value="<%= dados.nomeClientes %>"
+              placeholder="Insira seu nome"
+            /><br>
+            <label for="telClientes">Telefone:</label><br>
+            <input
+              type="text"
+              name="telClientes"
+              id="ctt-tel"
+              pattern="[0-9]{2} [0-9]{9}"
+              placeholder="xx xxxxxxxxx"
+              required
+              value="<%= dados.telClientes %>"
+            /><br>
+            <label for="cpfClientes">CPF:</label><br>
+            <input
+              type="text"
+              name="cpfClientes"
+              id="ctt-cpf"
+              required
+              placeholder="Insira seu CPF"
+              value="<%= dados.cpfClientes %>"
+            /><br>
+            <label for="Endereco">Endereço:</label><br>
+            <input
+              type="text"
+              name="Endereco"
+              id="ctt-Endereco"
+              required
+              placeholder="Logradouro"
+              value="<%= dados.Endereco %>"
+            /><br>
+            <label for="numEndereco">Número e complemento(Caso possua):</label><br>
+            <input
+              type="text"
+              name="numEndereco"
+              id="ctt-numEndereco"
+              required
+              placeholder="Numero"
+              value="<%= dados.numEndereco %>"
+            /><br>
+            <label for="Bairro">Bairro:</label><br>
+            <input
+              type="text"
+              name="Bairro"
+              id="ctt-Bairro"
+              required
+              placeholder="Bairro"
+              value="<%= dados.Bairro %>"
+            /><br>
+            <label for="Cidade">Cidade:</label><br>
+            <input
+              type="text"
+              name="Cidade"
+              id="ctt-Cidade"
+              required
+              placeholder="Cidade"
+              value="<%= dados.Cidade %>"
+            /><br>
+            <label for="CEP">CEP:</label><br>
+            <input
+              type="text"
+              name="CEP"
+              id="ctt-CEP"
+              required
+              placeholder="Insira seu CEP (somente os números)"
+              value="<%= dados.CEP %>"
+            /><br>
+            <input type="submit" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
