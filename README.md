@@ -109,12 +109,12 @@
 
 #### dotenv
 
-DB_USER=root
-DB_PASS=Admin1234
-DB_BASE=mydb
-DB_HOST=127.0.0.1
-DB_PORT=3306
-SECRET=bemobile
+- DB_USER=root
+- DB_PASS=Admin1234
+- DB_BASE=mydb
+- DB_HOST=127.0.0.1
+- DB_PORT=3306
+- SECRET=bemobile
 
 #### gitignore
 
