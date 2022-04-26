@@ -58,8 +58,7 @@ export const postRegistro = async (req, res) => {
     });
     res
       .status(200)
-      .redirect("/login")
-      .send({ message: "Cadastro realizado com sucesso!" });
+      .redirect("/login");
   } catch (err) {
     res.send(err.message);
   }
@@ -144,7 +143,7 @@ export const postCreateClientes = async (req, res) => {
       Cidade,
       CEP,
     });
-    res.status(200).send({ message: "Cliente cadastrado com sucesso!" });
+    res.status(200).redirect("/view/cliente");
   } catch (err) {
     res.send(err.message);
   }
@@ -259,7 +258,7 @@ export const postCreateProdutos = async (req, res) => {
       modeloProdutos,
       precoProdutos,
     });
-    res.status(200).send({ message: "Produto cadastrado com sucesso!" });
+    res.status(200).redirect("/view/produto");
   } catch (err) {
     res.send(err.message);
   }
