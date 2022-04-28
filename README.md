@@ -58,7 +58,7 @@
 
 - LOGIN // LOGOUT: Como conversado na entrevista, estou desenvolvendo minhas habilidades, precisei estudar bastante antes de começar a desenvolver essa API, principalmente relacionado a ligação entre tabelas, consegui efetuar essas ligações com sucesso, iniciei o processo de autenticação do login, porém, apresentou erro e infelizmente o prazo estava se encerrando, foquei em melhorar o código como um todo e estudar para desenvolver melhor o JWT o mais rápido possível.
 
-- PREÇO TOTAL: Por ser uma das últimas etapas do desenvolvimento da API, o prazo ficou próximo de encerrar e encontrei dificuldades em encontrar uma lógica para utilizar, será também alvo de estudos no futuro.
+- PREÇO TOTAL: Por ser uma das últimas etapas do desenvolvimento da API, o prazo ficou próximo de encerrar e encontrei dificuldades em encontrar uma lógica para utilizar, será também alvo de estudos no futuro. [Corrigido no dia 28/04/2022]
 
 ## MÓDULOS UTILIZADOS
 
