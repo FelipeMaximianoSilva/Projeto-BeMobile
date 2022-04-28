@@ -33,7 +33,6 @@ export const postLogin = async (req, res, next) => {
   if (login && pswd) {
     const token = jwt.sign({ idUser }, process.env.SECRET);
     return res.json({ auth: true, token: token }).redirect("/index");
-    next();
   }
   res.status(500).json({ message: "Login inválido!" });
 };
@@ -58,7 +57,8 @@ export const postRegistro = async (req, res) => {
     });
     res
       .status(200)
-      .redirect("/login");
+      .redirect("/login")
+      .send({ message: "Cadastro realizado com sucesso!" });
   } catch (err) {
     res.send(err.message);
   }
@@ -143,7 +143,8 @@ export const postCreateClientes = async (req, res) => {
       Cidade,
       CEP,
     });
-    res.status(200).redirect("/view/cliente");
+    // res.status(200).send({ message: "Cliente cadastrado com sucesso!" });
+    res.redirect("/view/clientes");
   } catch (err) {
     res.send(err.message);
   }
@@ -258,7 +259,7 @@ export const postCreateProdutos = async (req, res) => {
       modeloProdutos,
       precoProdutos,
     });
-    res.status(200).redirect("/view/produto");
+    res.status(200).send({ message: "Produto cadastrado com sucesso!" });
   } catch (err) {
     res.send(err.message);
   }
@@ -341,6 +342,9 @@ export const getViewVendas = async (req, res) => {
 export const getViewVendasDetalhes = async (req, res) => {
   try {
     const dados = await vendas.findByPk(req.params.id);
+    if (!dados) {
+      res.status(404).send({ message: "Número de venda não existe" });
+    }
     const cliente = await clientes.findAll();
     const produto = await produtos.findAll({
       where: {
@@ -378,14 +382,16 @@ export const postCreateVendas = async (req, res) => {
     const timeVendas = new Date().toJSON();
     const valor = await produtos.findByPk(produtosVendas);
     const valorunVendas = valor.precoProdutos;
+    const valortoVendas = valorunVendas * quantidadeVendas;
     await vendas.create({
       clienteVendas,
       produtosVendas,
       quantidadeVendas,
       valorunVendas,
       timeVendas,
+      valortoVendas,
     });
-    res.redirect("/views/vendas");
+    res.status(200).redirect("/view/vendas");
   } catch (err) {
     res.send(err.message);
   }
